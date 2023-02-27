@@ -145,16 +145,16 @@ session_start();
             <div>
                 <?php
                     if(isset($_POST["kifizdatum"])){
-                        $datas = Model::GetAllData("kifizdatum", $id);
+                        $datas = Model::GetAllData($id, "kifizdatum");
                     }
                     elseif(isset($_POST["bevosszeg"])){
-                        $datas = Model::GetAllData("bevosszeg", $id);
+                        $datas = Model::GetAllData($id, "bevosszeg");
                     }
                     elseif(isset($_POST["szamla"])){
-                        $datas = Model::GetAllData("szamla", $id);
+                        $datas = Model::GetAllData($id, "szamla");
                     }
                     else{
-                        $datas = Model::GetAllData("szamla", $id);
+                        $datas = Model::GetAllData($id, "szamla");
                     }
 
                     $osszbevetel = 0;

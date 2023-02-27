@@ -51,7 +51,7 @@ class Model{
         self::Disconnect();
     }
 
-    public static function GetAllData($orderBy = 'szamla', $id){
+    public static function GetAllData( $id, $orderBy = 'szamla'){
         self::Connect();
         try{
             $sql = "SELECT * FROM `szamlaadatok` WHERE `user_id` = '$id' ORDER BY `$orderBy` DESC;";
